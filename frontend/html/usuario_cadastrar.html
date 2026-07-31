@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/usuario_cadastrar.js" defer></script>
+    <title>Cadastro de Usuario</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">Compras Interno</span>
+            <a href="../index.html">Home</a>
+            <span class="sep">Usuarios</span>
+            <a href="./usuario_cadastrar.html" class="active">Cadastrar / Lote</a>
+            <a href="./usuario_listar.html">Listar</a>
+            <a href="./usuario_consultar.html">Consultar</a>
+            <a href="./usuario_atualizar.html">Atualizar</a>
+            <a href="./usuario_apagar.html">Apagar</a>
+            <span class="sep">Produtos</span>
+            <a href="./produto_cadastrar.html">Cadastrar / Lote</a>
+            <a href="./produto_listar.html">Listar</a>
+            <a href="./produto_consultar.html">Consultar</a>
+            <a href="./produto_atualizar.html">Atualizar</a>
+            <a href="./produto_apagar.html">Apagar</a>
+            <a href="./produto_dashboard.html">Dashboard</a>
+            <span class="sep">Operacoes</span>
+            <a href="./movimento_cadastrar.html">Registrar Compra</a>
+            <a href="./movimento_listar.html">Historico</a>
+            <a href="./mov_categoria_listar.html">Rel. Volume</a>
+            <a href="./mov_historico_saida.html">Rel. Criticos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastro de Usuario</h1>
+
+        <div class="container">
+            <h2>Formulario Manual</h2>
+            <form id="form_manual">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" required>
+
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" required>
+
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required>
+
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone">
+
+                <label for="endereco">Endereco</label>
+                <input type="text" id="endereco">
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade">
+
+                <label for="estado">Estado</label>
+                <input type="text" id="estado">
+
+                <button id="btn_cadastrar_manual">Salvar Usuario</button>
+            </form>
+        </div>
+
+        <div class="container_lote">
+            <h2>Carga Automatizada — DummyJSON</h2>
+            <p style="margin-bottom: 16px; color: #555;">Importa dados estruturados diretamente da API externa via bulkCreate.</p>
+            <button id="btn_carga_lote" class="btn-accent">Executar Carga em Lote</button>
+        </div>
+
+        <div id="resposta" class="resposta"></div>
+    </main>
+</body>
+</html>

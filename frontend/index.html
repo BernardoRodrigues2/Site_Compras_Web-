@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Sistema de Compras Interno</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">Compras Interno</span>
+            <a href="./index.html" class="active">Home</a>
+            <span class="sep">Usuarios</span>
+            <a href="./html/usuario_cadastrar.html">Cadastrar / Lote</a>
+            <a href="./html/usuario_listar.html">Listar</a>
+            <a href="./html/usuario_consultar.html">Consultar</a>
+            <a href="./html/usuario_atualizar.html">Atualizar</a>
+            <a href="./html/usuario_apagar.html">Apagar</a>
+            <span class="sep">Produtos</span>
+            <a href="./html/produto_cadastrar.html">Cadastrar / Lote</a>
+            <a href="./html/produto_listar.html">Listar</a>
+            <a href="./html/produto_consultar.html">Consultar</a>
+            <a href="./html/produto_atualizar.html">Atualizar</a>
+            <a href="./html/produto_apagar.html">Apagar</a>
+            <a href="./html/produto_dashboard.html">Dashboard</a>
+            <span class="sep">Operacoes</span>
+            <a href="./html/movimento_cadastrar.html">Registrar Compra</a>
+            <a href="./html/movimento_listar.html">Historico</a>
+            <a href="./html/mov_categoria_listar.html">Rel. Volume</a>
+            <a href="./html/mov_historico_saida.html">Rel. Criticos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Painel de Gestao — Backoffice</h1>
+        <div class="card-grid">
+            <div class="card" onclick="location.href='./html/produto_dashboard.html'">
+                <h3>Catalogo de Produtos</h3>
+                <p>Gerencie o estoque e os produtos cadastrados.</p>
+            </div>
+            <div class="card" onclick="location.href='./html/usuario_listar.html'">
+                <h3>Controle de Usuarios</h3>
+                <p>Gerencie quem realiza compras na plataforma.</p>
+            </div>
+            <div class="card" onclick="location.href='./html/movimento_cadastrar.html'">
+                <h3>Registrar Venda/Compra</h3>
+                <p>Registre entradas e saidas de estoque.</p>
+            </div>
+            <div class="card" onclick="location.href='./html/mov_categoria_listar.html'">
+                <h3>Relatorios</h3>
+                <p>Graficos e analises de estoque e financeiro.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

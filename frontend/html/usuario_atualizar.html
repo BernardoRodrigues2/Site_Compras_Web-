@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/usuario_atualizar.js" defer></script>
+    <title>Atualizar Usuario</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">Compras Interno</span>
+            <a href="../index.html">Home</a>
+            <span class="sep">Usuarios</span>
+            <a href="./usuario_cadastrar.html">Cadastrar / Lote</a>
+            <a href="./usuario_listar.html">Listar</a>
+            <a href="./usuario_consultar.html">Consultar</a>
+            <a href="./usuario_atualizar.html" class="active">Atualizar</a>
+            <a href="./usuario_apagar.html">Apagar</a>
+            <span class="sep">Produtos</span>
+            <a href="./produto_cadastrar.html">Cadastrar / Lote</a>
+            <a href="./produto_listar.html">Listar</a>
+            <a href="./produto_consultar.html">Consultar</a>
+            <a href="./produto_atualizar.html">Atualizar</a>
+            <a href="./produto_apagar.html">Apagar</a>
+            <a href="./produto_dashboard.html">Dashboard</a>
+            <span class="sep">Operacoes</span>
+            <a href="./movimento_cadastrar.html">Registrar Compra</a>
+            <a href="./movimento_listar.html">Historico</a>
+            <a href="./mov_categoria_listar.html">Rel. Volume</a>
+            <a href="./mov_historico_saida.html">Rel. Criticos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Atualizar Usuario</h1>
+        <div class="container">
+            <h2>Buscar Usuario pelo ID</h2>
+            <label for="id">ID do Usuario</label>
+            <div class="flex-row mt-4">
+                <input type="number" id="id" placeholder="Ex: 1" style="max-width: 180px;">
+                <button id="btn_buscar" class="btn-neutral">Buscar</button>
+            </div>
+
+            <div id="form_atualizar" style="display: none; flex-direction: column; gap: 12px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #ddd;">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome">
+
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email">
+
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone">
+
+                <button id="btn_atualizar">Salvar Atualizacao</button>
+            </div>
+
+            <div id="resposta" class="resposta"></div>
+        </div>
+    </main>
+</body>
+</html>

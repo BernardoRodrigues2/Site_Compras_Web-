@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/usuario_consultar.js" defer></script>
+    <title>Consultar Usuario</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">Compras Interno</span>
+            <a href="../index.html">Home</a>
+            <span class="sep">Usuarios</span>
+            <a href="./usuario_cadastrar.html">Cadastrar / Lote</a>
+            <a href="./usuario_listar.html">Listar</a>
+            <a href="./usuario_consultar.html" class="active">Consultar</a>
+            <a href="./usuario_atualizar.html">Atualizar</a>
+            <a href="./usuario_apagar.html">Apagar</a>
+            <span class="sep">Produtos</span>
+            <a href="./produto_cadastrar.html">Cadastrar / Lote</a>
+            <a href="./produto_listar.html">Listar</a>
+            <a href="./produto_consultar.html">Consultar</a>
+            <a href="./produto_atualizar.html">Atualizar</a>
+            <a href="./produto_apagar.html">Apagar</a>
+            <a href="./produto_dashboard.html">Dashboard</a>
+            <span class="sep">Operacoes</span>
+            <a href="./movimento_cadastrar.html">Registrar Compra</a>
+            <a href="./movimento_listar.html">Historico</a>
+            <a href="./mov_categoria_listar.html">Rel. Volume</a>
+            <a href="./mov_historico_saida.html">Rel. Criticos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Consultar Usuario</h1>
+        <div class="container">
+            <h2>Busca por Codigo</h2>
+            <label for="codUsuario">Codigo do Usuario</label>
+            <div class="flex-row mt-4">
+                <input type="number" id="codUsuario" placeholder="Ex: 1" style="max-width: 180px;">
+                <button id="btn_consultar">Buscar</button>
+            </div>
+            <div id="resposta" style="margin-top: 20px;"></div>
+        </div>
+    </main>
+</body>
+</html>

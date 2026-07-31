@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels" defer></script>
+    <script src="../js/mov_historico_saida.js" defer></script>
+    <title>Relatorio — Produtos Criticos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">Compras Interno</span>
+            <a href="../index.html">Home</a>
+            <span class="sep">Usuarios</span>
+            <a href="./usuario_cadastrar.html">Cadastrar / Lote</a>
+            <a href="./usuario_listar.html">Listar</a>
+            <a href="./usuario_consultar.html">Consultar</a>
+            <a href="./usuario_atualizar.html">Atualizar</a>
+            <a href="./usuario_apagar.html">Apagar</a>
+            <span class="sep">Produtos</span>
+            <a href="./produto_cadastrar.html">Cadastrar / Lote</a>
+            <a href="./produto_listar.html">Listar</a>
+            <a href="./produto_consultar.html">Consultar</a>
+            <a href="./produto_atualizar.html">Atualizar</a>
+            <a href="./produto_apagar.html">Apagar</a>
+            <a href="./produto_dashboard.html">Dashboard</a>
+            <span class="sep">Operacoes</span>
+            <a href="./movimento_cadastrar.html">Registrar Compra</a>
+            <a href="./movimento_listar.html">Historico</a>
+            <a href="./mov_categoria_listar.html">Rel. Volume</a>
+            <a href="./mov_historico_saida.html" class="active">Rel. Criticos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Relatorio Grafico: Produtos Criticos</h1>
+
+        <button id="gerar_grafico" style="margin-bottom: 20px;">Gerar Grafico e Tabela</button>
+
+        <div id="resposta" class="resposta">Clique no botao para renderizar...</div>
+
+        <div class="container_grafico">
+            <canvas id="graf"></canvas>
+        </div>
+
+        <h2 style="margin: 24px 0 12px;">Tabela Analitica — Estoque abaixo de 10 unidades</h2>
+        <div id="tabela_resposta" class="container" style="max-width: 1060px;"></div>
+    </main>
+</body>
+</html>
