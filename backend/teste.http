@@ -1,0 +1,153 @@
+### - testes da API - o REST Client
+
+### - Teste se o servidor está funcionando
+GET http://localhost:3000/
+Content-Type: application/json
+
+#####################################################################
+### PASSO 1: CARGA INICIAL (BULK CREATE)
+
+### Carga Lote Usuários
+POST http://localhost:3000/usuarios/carga-lote
+Content-Type: application/json
+
+[
+    {
+        "firstName": "Admin",
+        "lastName": "Global",
+        "age": 30,
+        "email": "admin@teste.com",
+        "phone": "999999999"
+    }
+]
+
+### Carga Lote Produtos
+POST http://localhost:3000/produtos/carga-lote
+Content-Type: application/json
+
+[
+    { "title": "Produto 1", "category": "Beleza", "price": 50.00, "stock": 5 },
+    { "title": "Produto 2", "category": "Calçados", "price": 700.00, "stock": 25 },
+    { "title": "Produto 3", "category": "Eletrônicos", "price": 2500.00, "stock": 12 },
+    { "title": "Produto 4", "category": "Escritório", "price": 1200.00, "stock": 8 },
+    { "title": "Produto 5", "category": "Eletrodomésticos", "price": 450.00, "stock": 15 },
+    { "title": "Produto 6", "category": "Livros", "price": 120.00, "stock": 40 }
+]
+
+#####################################################################
+### PASSO 2: CRUD DE USUÁRIOS
+
+### Cadastrar Usuário
+POST http://localhost:3000/usuario
+Content-Type: application/json
+
+{
+    "nome": "João",
+    "sobrenome": "Silva",
+    "idade": 25,
+    "email": "joao@email.com",
+    "telefone": "123456789"
+}
+
+### Listar Usuários
+GET http://localhost:3000/usuario
+Content-Type: application/json
+
+### Consultar Usuário 2 (João)
+GET http://localhost:3000/usuario/2
+Content-Type: application/json
+
+### Atualizar Usuário 2
+PUT http://localhost:3000/usuario/2
+Content-Type: application/json
+
+{
+    "nome": "João Carlos"
+}
+
+### Apagar Usuário 2
+DELETE http://localhost:3000/usuario/2
+Content-Type: application/json
+
+#####################################################################
+### PASSO 3: CRUD DE PRODUTOS
+
+### Cadastrar Produto
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+    "nome": "Produto Teste",
+    "categoria": "Diversos",
+    "preco": 100.00,
+    "qtdeEstoque": 10,
+    "descricao": "Teste"
+}
+
+### Listar Produtos
+GET http://localhost:3000/produto
+Content-Type: application/json
+
+### Consultar Produto 7 (Produto Teste)
+GET http://localhost:3000/produto/7
+Content-Type: application/json
+
+### Atualizar Produto 7
+PUT http://localhost:3000/produto/7
+Content-Type: application/json
+
+{
+    "preco": 90.00
+}
+
+### Apagar Produto 7
+DELETE http://localhost:3000/produto/7
+Content-Type: application/json
+
+#####################################################################
+### PASSO 4: MOVIMENTAÇÕES DE ESTOQUE
+
+### - Movimentação Com Sucesso (Saída)
+POST http://localhost:3000/compra
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "idProduto": 3,
+    "tipoMovimento": "SAIDA",
+    "quantidadeMovimentada": 3,
+    "descontoAplicado": 0.00,
+    "formaPagamento": "CREDITO",
+    "statusCompra": "PAGA",
+    "dataCompra": "2026-07-06"
+}
+
+### - Movimentação Com Erro (Saldo Insuficiente) - Produto 1 tem 5 no estoque
+POST http://localhost:3000/compra
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "idProduto": 1,
+    "tipoMovimento": "SAIDA",
+    "quantidadeMovimentada": 50,
+    "descontoAplicado": 0.00,
+    "formaPagamento": "CREDITO",
+    "statusCompra": "PENDENTE",
+    "dataCompra": "2026-07-06"
+}
+
+### Listar Movimentações
+GET http://localhost:3000/compra
+Content-Type: application/json
+
+#####################################################################
+### PASSO 5: RELATÓRIOS E GRÁFICOS
+
+### - Consultar Relatório de Categorias
+GET http://localhost:3000/relatorio/volume-compras
+Content-Type: application/json
+
+### - Consultar Relatório de Críticos
+GET http://localhost:3000/relatorio/produtos-criticos
+Content-Type: application/json
